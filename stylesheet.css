@@ -289,7 +289,7 @@ p {
 }
 
 .card-img-2 {
-    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/maxim-ilyahov-0aRycsfH57A-unsplash.jpg');
+    background-image: url('https://raw.githubusercontent.com/erika-villeda/erika-villeda.github.io/main/sources/maxim-ilyahov-0aRycsfH57A-unsplash.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ p {
 }
 
 .card-img-3 {
-    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/card3.jpg');
+    background-image: url('https://raw.githubusercontent.com/erika-villeda/erika-villeda.github.io/main/sources/card3.jpg');
     background-size: cover;
     background-position: bottom 90% center;
     background-size: calc(100% + 19px);
