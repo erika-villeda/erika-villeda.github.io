@@ -314,7 +314,7 @@ p {
 }
 
 .card-img-4 {
-    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/card2.jpg');
+    background-image: url('https://raw.githubusercontent.com/erika-villeda/erika-villeda.github.io/main/sources/card2.jpg');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
