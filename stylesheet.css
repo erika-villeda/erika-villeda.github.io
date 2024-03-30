@@ -277,7 +277,7 @@ p {
 }
 
 .card-img-1 {
-    background-image: url('sources/card1.jpg');
+    background-image: url('https://raw.githubusercontent.com/erika-villeda/erika-villeda.github.io/main/sources/card1.jpg');
     background-size: cover;
     background-position: bottom 20% center;
     background-repeat: no-repeat;
