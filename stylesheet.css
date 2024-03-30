@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;800;900&family=Lora&family=Work+Sans:wght@400;700&display=swap')
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+body {
+    margin: 0;
+    font-family: "Gothic A1", sans-serif;
+    display: block;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+/* -- FONTS -- */
+
+h1, h2, h3, h4, p {
+    font-family: "Gothic A1", sans-serif;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* -------- OTHER BREAKPOINT -------- */
+
+@media (min-width: 769px) {
+.card-content {
+    h4 + p {
+        margin-top: 0.5rem !important;
+    }
+}
+}
+
+
+
+
+/* -- HEADER -- */
+
+.header {
+    margin-top: 2rem;
+}
+
+.logo {
+    width: 90%;
+    max-width: 150px;
+    margin: auto;
+}
+
+
+
+
+
+/* -- HERO -- */
+
+.hero {
+    /* Sizing */
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 80px);
+    margin: 2rem auto;
+    border-radius: 30px;
+    position: relative;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: left;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    /* h3 {
+        margin-bottom: 2.5rem;
+    } */
+
+    /* p {
+        margin-top: 2.5rem;
+    } */
+
+    /* Background styles */
+        background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/annie-spratt-QckxruozjRg-unsplash.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    h1, h2, h3, h4, p {
+        color: white
+    }
+}
+
+.landing {
+    position: relative;
+    padding: 0 0 5px;
+}
+
+.landing::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: linear-gradient(140deg, rgba(103,159,111,1) 0%, rgba(211,221,211,1) 45%, rgba(179,190,182,1) 55%, rgba(21,29,27,1) 100%);
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    pointer-events: none;
+    z-index: -1
+}
+
+.hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.4);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 30px;
+}
+
+.hero-inner {
+    max-width: 1010px;
+    width: 85%;
+    z-index: 2;
+    margin-top: -2rem;
+}
+
+
+
+/* -- BUTTONS -- */
+
+.btn {
+    margin: 1rem 0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease-in-out all;
+    display: inline-block;
+}
+
+.btn + .btn {
+    margin-left: 0.5rem;
+}
+
+.btn-brand {
+    color: black;
+    background-color: #59BF72;
+    border: 2px solid #59BF72;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+
+    &:hover, &:focus, &:active {
+        background-color: white;
+        border: 2px solid white;
+    }
+}
+
+.btn-brand-alt {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+
+    &:hover, &:focus, &:active {
+        color: black;
+        background: white;
+        border: 2px solid white;
+    }
+}
+
+
+/* -- CARDS SECTION -- */
+
+.one-col {
+    width: 80%;
+    max-width: 1270px;
+    background-color: white;
+    margin: -8rem auto 2rem;
+    z-index: 4;
+    position: relative;
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+/* .hero + .one-col {
+    margin-top:  0;
+} */
+
+.cards {
+    width: 100%;
+    /* height: 16rem; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    h4, p {
+        margin: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 2rem;
+    }
+}
+
+.card-content {
+    display: grid;
+    min-height: 7rem;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.card {
+    transition: 0.2s ease-in-out all;
+
+    &:hover, &:focus, &:active {
+        opacity: 0.7;
+    }
+}
+
+.btn-card {
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card-img-1 {
+    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/card1.jpg');
+    background-size: cover;
+    background-position: bottom 20% center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    width: 100%;
+    padding-top: 55%;
+    border-radius: 20px;
+    border: 2px solid #d6d6d6;
+}
+
+.card-img-2 {
+    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/maxim-ilyahov-0aRycsfH57A-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    width: 100%;
+    padding-top: 55%;
+    border-radius: 20px;
+    border: 2px solid #d6d6d6;
+}
+
+.card-img-3 {
+    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/card3.jpg');
+    background-size: cover;
+    background-position: bottom 90% center;
+    background-size: calc(100% + 19px);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    width: 100%;
+    padding-top: 55%;
+    border-radius: 20px;
+    border: 2px solid #d6d6d6;
+}
+
+.card-img-4 {
+    background-image: url('/Users/erikavilleda/Documents/My files/wd test/sources/card2.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    width: 100%;
+    padding-top: 55%;
+    border-radius: 20px;
+    border: 2px solid #d6d6d6;
+}
+
+
+
+
+
+/* -------- CTA SECTION -------- */
+
+.cta-section {
+    /* width: 88%;
+    max-width: 1278px; */
+    width: calc(80% + 4rem);
+    max-width: 1270px;
+    margin: 1rem auto;
+}
+
+.cta-container {
+    width: 100%;
+    /* display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 8px; */
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+.cta-btn {
+    border: 2px solid #d6d6d6;
+    border-radius: 30px;
+    margin: 1rem 0;
+    display: inline-flex;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+
+    h3 {
+        font-weight: 700;
+    }
+}
+
+.two-col {
+    padding: 1rem 3rem;
+    flex: 1 1 50%;
+    position: relative;
+}
+
+.left-side {
+    background: linear-gradient(140deg, rgba(89,191,114,1) 0%, rgba(221,221,221,1) 50%, rgba(89,191,114,1) 100%);
+}
+
+.arrow {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    border: 2px solid #59BF72;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -25px;
+    margin: auto;
+}
+
+.left-side {
+    transition: 0.2s ease-in-out all;
+    background-size: 180% 180%;
+    background-position: 0%;
+}
+
+.cta-btn {
+    &:hover, &:focus, &:active {
+        .arrow {
+            animation: sway 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+        }
+
+        .left-side {
+            background-position: 70%;
+        }
+    }
+}
+
+
+@keyframes sway {
+    10%,90% {
+        transform: translate3d(-1px, 0, 0)
+    }
+
+    20%,80% {
+        transform: translate3d(2px, 0, 0)
+    }
+
+    30%,50%,70% {
+        transform: translate3d(-4px, 0, 0)
+    }
+
+    40%,60% {
+        transform: translate3d(4px, 0, 0)
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- IPAD BREAKPOINT -------- */
+
+@media (max-width: 992px) and (min-width: 769px) {
+.hero {
+    h3 {
+        margin-bottom: 1rem;
+    }
+}
+
+.one-col {
+    padding: 2rem 2rem 0;
+}
+}
+
+@media (max-width: 1265px) {
+
+/* -- CARDS SECTION -- */
+
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btn-card {
+    margin-bottom: 2rem;
+}
+
+.one-col {
+    padding: 2rem 2rem 0;
+}
+}
+
+
+
+@media (max-width: 768px) {
+/* -------- MOBILE BREAKPOINT -------- */
+
+/* -- MOBILE HEADER -- */
+
+.header {
+    margin-top: 1.5rem;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.one-col {
+    margin: -4rem auto 2rem;
+}
+
+
+
+
+/* -- HERO -- */
+
+.hero {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 100px);
+    margin: 1rem auto;
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+
+
+/* -- MOBILE CARDS -- */
+
+.one-col {
+    width: 65%;
+}
+
+.one-col {
+    padding: 2rem 2rem 0;
+}
+
+.card-content {
+    min-height: 0rem;
+}
+
+
+
+/* -- MOBILE FONTS -- */
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+/* -- MOBILE BUTTONS -- */
+
+
+
+
+/* -- CARDS SECTION -- */
+
+.cards {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+/* -------- CTA SECTION -------- */
+
+.two-col {
+    padding: 1rem 2rem;
+    flex: 1 1 100%;
+}
+
+.cta-section {
+    width: calc(82% - 2rem);
+}
+
+.cta-btn {
+    display: block;
+
+    h3 {
+        width: 70%;
+    }
+}
+
+.arrow {
+    left: auto;
+    right: 2rem;
+}
+
+}
+
+
+
+@media (max-width: 520px) {
+    
+/* -- MOBILE BUTTONS -- */
+
+.btn {
+    display: block;
+    width: fit-content;
+}
+
+.btn + .btn {
+    margin-left: 0rem;
+}
+
+
+}
+
+
+
